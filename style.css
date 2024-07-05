@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgba(42, 51, 66, 1);
+    box-sizing: border-box;
+}
+
+.nav{
+    border-bottom:rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+    /* padding-block: 12px; */
+    padding-inline:32px; 
+}
+
+.nav > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    max-width: 1400px;
+    margin-inline: auto;
+
+    position: relative;
+  
+    /* height: 80px;    don't define height   -content should define automatically */
+   
+    
+
+}
+
+
+.logo-d{
+   display: flex;
+   align-items: center;
+   gap:14px;
+   /* border: 2px solid green; */
+}
+
+.logo-d img{
+    /* padding-right: 14px; */
+}
+
+.logo-d div{
+    font-size: 20px;
+}
+
+
+.container{
+    display: flex;
+    /* justify-content: space-between; */
+    /* gap:200px; */
+    flex-grow: 1;
+    align-items: center;
+}
+
+
+.nav-link{
+    margin-inline: auto;
+}
+
+
+
+.nav-link > ul{
+    display: flex;
+    align-items: center;
+    gap:54px;
+    /* border: 2px solid yellow; */
+    padding-left: 0;
+}
+
+.nav-link > ul li{
+    /* padding-inline: 25px; */
+    list-style: none;
+    padding-block: 20px;
+    
+    
+}
+
+.nav-link > ul li a{
+    text-decoration: none;
+    font-size: 16px;
+}
+.user-d{
+    display:flex;
+    align-items: center;
+    gap:15px;
+    /* border: 2px solid black; */
+}
+
+
+
+.user-d div{
+    font-size: 14px;
+}
+
+
+
+#C{
+    padding-right: 17px;
+}
+
+
+#arrow{
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-in;
+}
+
+
+#Course{
+    position: relative;
+    /* border: 2px solid red; */
+}
+.card{
+    position: absolute;
+    top:100px;
+    left:-13px;
+    width: 300px;
+    border-radius: 1.5px;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 10px 0px rgba(30, 27, 27, 0.1);
+    border: 1.5px solid rgba(233, 234, 235, 1);
+    padding: 16px 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in;
+}
+
+.card ul{
+    padding: 0;
+}
+
+
+.card ul li{
+    font-size: 12px;
+    padding: 0;
+line-height: 16.37px;
+letter-spacing: 0.03em;
+
+
+}
+.card ul li + li{
+margin-top: 10px;
+
+}
+
+.card ul li:hover{
+    
+text-decoration: underline;
+
+}
+
+
+#Course:hover  .card{
+    opacity: 1;
+    top:60px;
+    pointer-events: initial;
+    
+    
+}
+
+#Course:hover #arrow{
+    transform: rotate(0deg);
+}
+
+
+#Hamburger,#cross{
+    cursor: pointer;
+    display: none;
+}
+  
+@media (max-width:790px) {
+
+    
+    .nav-link > ul{
+        gap:35px;
+
+    }
+    
+    #C{
+        padding-right: 13px;
+    }
+}
+
+
+
+@media (max-width:733px) {
+
+    
+#Hamburger{
+    display: block
+}
+    
+ .container{
+    display: none;
+    position: absolute;
+
+width: 260px;
+/* height: 179px; */
+top: 12px;
+right: -3px;
+/* padding: 10px 20px; */
+border-radius: 5px;
+border: 1.5px;
+opacity: 0px;
+flex-direction: column-reverse;
+/* justify-content: left; */
+align-items:initial;
+
+background: rgba(255, 255, 255, 1);
+border: 1.5px solid rgba(233, 234, 235, 1);
+box-shadow: 0px 4px 10px 0px rgba(30, 27, 27, 0.1);
+
+ }
+
+
+ .nav-link > ul{
+    flex-direction: column;
+    gap:0px;
+    align-items:initial;
+ }
+ 
+ .nav-link{
+    margin-inline: unset;
+    padding-inline: 24px;
+ }
+
+ .nav-link > ul li{
+    padding-block: 3px;
+    padding-inline: 0px;
+    
+ }
+
+ /* .nav-link > ul > li> a{
+    padding-left: 24px;
+ } */
+
+ .card{
+    position: static;
+    top:0;
+    left: 0;
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+    box-shadow:none;
+    border: 0;
+    max-height: 0;
+    overflow: hidden;
+    width: initial;
+    padding: 0;
+    transition:max-height 0.2s ease-in-out ;
+  
+ }
+
+ #fi{
+    padding-top: 10px;
+ }
+
+
+ #Course{
+    /* height: 27px;
+    overflow: hidden; */
+ }
+
+ #Course:hover{
+    /* overflow: auto;
+    height: 270px; */
+ }
+
+ #Course:hover  .card{
+    max-height:250px;
+    
+    
+}
+
+.card ul li a{
+    font-size: 12px;
+}
+
+ .user-d{
+    padding-block: 8px;
+    padding-left: 24px;
+    border-bottom: 1px solid rgba(233, 234, 235, 1);
+ }
+
+ #cross{
+    display: block;
+    position: absolute;
+    right:15px;
+
+ }
+
+}
